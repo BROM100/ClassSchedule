@@ -1082,9 +1082,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\barte\\OneDrive\\Pulpit\\CRM\\CRM\\CRM.csproj",
-      "projectName": "CRM",
-      "projectPath": "C:\\Users\\barte\\OneDrive\\Pulpit\\CRM\\CRM\\CRM.csproj",
+      "projectUniqueName": "C:\\Users\\barte\\OneDrive\\Pulpit\\CRM\\CRM\\ClassSchedule.csproj",
+      "projectName": "ClassSchedule",
+      "projectPath": "C:\\Users\\barte\\OneDrive\\Pulpit\\CRM\\CRM\\ClassSchedule.csproj",
       "packagesPath": "C:\\Users\\barte\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\barte\\OneDrive\\Pulpit\\CRM\\CRM\\obj\\",
       "projectStyle": "PackageReference",

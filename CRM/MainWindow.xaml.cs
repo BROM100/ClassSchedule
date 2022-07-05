@@ -24,5 +24,10 @@ namespace CRM
         {
             InitializeComponent();
         }
+
+        private void ComboBox_SelectionChanged()
+        {
+
+        }
     }
 }

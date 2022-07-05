@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eNKC+2igKboF9Y8tHy3wzG36zTtHKqVkEynLNYivfpBCSKI7yShOrtgpITsx5LbUtNyCGwx+6wg4G1hpJ6zNCg==",
+  "dgSpecHash": "GXhuA/gX+giklvjwIZ0lO9ItQkpLn/T1hiaJybN2yDo42240oky3jFUVWUHpbSyO6sFgzcruXVzx39huZGbe2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\barte\\OneDrive\\Pulpit\\CRM\\CRM\\CRM.csproj",
+  "projectFilePath": "C:\\Users\\barte\\OneDrive\\Pulpit\\CRM\\CRM\\ClassSchedule.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\barte\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.6\\microsoft.data.sqlite.core.6.0.6.nupkg.sha512",
     "C:\\Users\\barte\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.6\\microsoft.entityframeworkcore.6.0.6.nupkg.sha512",
