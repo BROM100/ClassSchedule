@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CRM
+namespace ClassSchedule
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,9 +25,32 @@ namespace CRM
             InitializeComponent();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CreateButton_Click(object sender, RoutedEventArgs e)
+       
         {
+
+
+        }
+
+        private void ReadButton_Click(object sender, RoutedEventArgs e)
+            {
+
+
+            }
+
+        private void UpdateButton_Click(object sender, RoutedEventArgs e)
+            
+        {
+
+
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+            
+        {
+
 
         }
     }
+
 }
