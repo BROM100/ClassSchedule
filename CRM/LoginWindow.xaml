@@ -1,0 +1,15 @@
+﻿<Window x:Class="ClassSchedule.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClassSchedule"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="300" Width="300">
+    <Grid>
+        <TextBox x:Name="UsernameTextBox" Margin="90,122,90,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="120" TextAlignment="Center" Background="Gray" RenderTransformOrigin="0.472,0.495" Height="25" FontWeight="Normal"/>
+        <TextBox x:Name="PasswordTextBox" Margin="90,164,90,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="120" TextAlignment="Center" Background="Gray" RenderTransformOrigin="0.472,0.495" Height="25" FontWeight="Normal"/>
+        <Button x:Name="SubmitButton" Content="Submit" HorizontalAlignment="Left" Margin="100,220,100,0" VerticalAlignment="Top" Background="#FF6170C3" Width="100" Height="30" Click="SubmitButton_Click"/>
+
+    </Grid>
+</Window>
