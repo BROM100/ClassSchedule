@@ -25,7 +25,7 @@ namespace CRM
             InitializeComponent();
         }
 
-        private void ComboBox_SelectionChanged()
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
