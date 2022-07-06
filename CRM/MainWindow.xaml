@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClassSchedule"
         mc:Ignorable="d"
-        Title="ClassSchedule" Height="500" Width="900">
+        Title="ClassSchedule" Height="500" Width="1200">
     <Grid  >
 
-        <ListView Name="ItemList" Margin="5,20,5,0" Height="195" VerticalAlignment="Top">
+        <ListView Name="ItemList" Margin="5,20,5,0" Height="195" Width="700" VerticalAlignment="Top" HorizontalAlignment="Left">
 
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Classes" Width="100"  DisplayMemberBinding="{Binding Id}"/>
-                    <GridViewColumn Header="Student Name" Width="150" DisplayMemberBinding="{Binding Studet}"/>
-                    <GridViewColumn Header="Teacher Name" Width="150" DisplayMemberBinding="{Binding Teacher}"/>
-                    <GridViewColumn Header="Room Name" Width="150" DisplayMemberBinding="{Binding Teacher}"/>
+                    <GridViewColumn Header="Classes" Width="100"  DisplayMemberBinding="{Binding Class_name}"/>
+                    <GridViewColumn Header="Student Name" Width="150" DisplayMemberBinding="{Binding Student_name}"/>
+                    <GridViewColumn Header="Teacher Name" Width="150" DisplayMemberBinding="{Binding Teacher_name}"/>
+                    <GridViewColumn Header="Room Name" Width="150" DisplayMemberBinding="{Binding Room_name}"/>
                 </GridView>
             </ListView.View>
         </ListView>

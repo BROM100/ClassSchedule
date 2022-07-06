@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClassSchedule"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="300" Width="300">
+        Title="LoginWindow" Height="400" Width="400">
     <Grid>
         <TextBox x:Name="UsernameTextBox" Margin="90,122,90,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" TextAlignment="Center" Background="Gray" RenderTransformOrigin="0.472,0.495" Height="25" FontWeight="Normal"/>
-        <Button x:Name="SubmitButton" Content="Submit" HorizontalAlignment="Left" Margin="100,220,100,0" VerticalAlignment="Top" Background="#FF6170C3" Width="100" Height="30" Click="SubmitButton_Click"/>
-        <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" Margin="105,168,0,0" VerticalAlignment="Top" Width="120" Background="#FFD65555"/>
+        <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Center" Margin="0,169,0,0" VerticalAlignment="Top" Width="120" Background="Gray" Height="25"/>
+        <Button x:Name="SubmitButton" Content="Submit" HorizontalAlignment="Center" Margin="0,216,0,0" VerticalAlignment="Top" Background="#FF6170C3" Width="100" Height="30" Click="SubmitButton_Click"/>
+        <Label Content="Username" HorizontalAlignment="Center" Margin="0,91,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.058,0.304"/>
+        <Label Content="Password" HorizontalAlignment="Center" Margin="120,147,115,0" VerticalAlignment="Top" RenderTransformOrigin="-0.058,0.304"/>
+
 
     </Grid>
 </Window>
