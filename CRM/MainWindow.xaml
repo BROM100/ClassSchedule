@@ -8,7 +8,7 @@
         Title="ClassSchedule" Height="500" Width="1200">
     <Grid  >
 
-        <ListView Name="ItemList" Margin="5,20,5,0" Height="195" Width="700" VerticalAlignment="Top" HorizontalAlignment="Left">
+        <ListView Name="ItemList" Margin="5,20,5,0" Height="195" Width="580" VerticalAlignment="Top" HorizontalAlignment="Left">
 
             <ListView.View>
                 <GridView>

@@ -27,6 +27,7 @@ namespace ClassSchedule
             Read();
         }
 
+       
 
        
 
@@ -43,7 +44,7 @@ namespace ClassSchedule
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
 
         {
-            //Update();
+            Update();
 
         }
 
@@ -146,23 +147,59 @@ namespace ClassSchedule
         {
 
 
-            var selected = ItemList.SelectedItem as listviewdata;
+            var selected_row = ItemList.SelectedItem as listviewdata;
 
             using (DataContext context = new DataContext())
             {
-
+                if(selected_row != null)
                 {
 
+                    if (ClassesTextBox.Text.Trim() != "")
+                    {
+                        var classupdate = context.Classes.Where(x => x.ID.Equals(selected_row.Class_id)).Single();
+                        classupdate.Name = ClassesTextBox.Text;
+                        context.Update(classupdate);
+
+                    }
+                    if (StudentTextBox.Text.Trim() != "")
+                    {
+                        var classupdate = context.Classes.Where(x => x.ID.Equals(selected_row.Class_id)).Single();
+                        var studentupdate = context.Students.Where(x => x.ID == classupdate.StudentID).Single();
+                        studentupdate.Name = StudentTextBox.Text;
+                        context.Update(studentupdate);
+                    }
+                    if (RoomTextBox.Text.Trim() != "")
+                    {
+                        var classupdate = context.Classes.Where(x => x.ID.Equals(selected_row.Class_id)).Single();
+                        var roomupdate = context.Rooms.Where(x => x.ID == classupdate.RoomID).Single();
+                        roomupdate.Name = RoomTextBox.Text;
+                        context.Update(roomupdate);
+                    }
+                    if (TeacherTextBox.Text.Trim() != "")
+                    {
+                        var classupdate = context.Classes.Where(x => x.ID.Equals(selected_row.Class_id)).Single();
+                        var teacherupdate = context.Teachers.Where(x => x.ID == classupdate.RoomID).Single();
+                        teacherupdate.Name = RoomTextBox.Text;
+                        context.Update(teacherupdate);
+                    }
+
+                    context.SaveChanges();
+                    Read();
+
+
+
                 }
-
-
+                else
+                {
+                    MessageBox.Show("You have to select a row to perform an update.");
+                }
             }
         }
 
 
 
-
-        public void Delete()
+        //Delete
+        public void Delete( )
         {
             var selected_row = ItemList.SelectedItem as listviewdata;
             using (DataContext context = new DataContext())
