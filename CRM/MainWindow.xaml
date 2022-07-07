@@ -12,6 +12,7 @@
 
             <ListView.View>
                 <GridView>
+                    <GridViewColumn Header="Id" Width="30"  DisplayMemberBinding="{Binding Class_id}"/>
                     <GridViewColumn Header="Classes" Width="100"  DisplayMemberBinding="{Binding Class_name}"/>
                     <GridViewColumn Header="Student Name" Width="150" DisplayMemberBinding="{Binding Student_name}"/>
                     <GridViewColumn Header="Teacher Name" Width="150" DisplayMemberBinding="{Binding Teacher_name}"/>
@@ -39,19 +40,14 @@
             </StackPanel>
         </Button>
 
-        <Button x:Name="ReadButton"  HorizontalAlignment="Left" Click="ReadButton_Click" Margin="90,360,0,0" VerticalAlignment="Top" Width="70" >
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Read"/>
-            </StackPanel>
-        </Button>
 
-        <Button x:Name="UpdateButton" HorizontalAlignment="Left" Click="UpdateButton_Click" Margin="170,360,0,0" VerticalAlignment="Top" Width="70" >
+        <Button x:Name="UpdateButton" HorizontalAlignment="Left" Click="UpdateButton_Click" Margin="90,360,0,0" VerticalAlignment="Top" Width="70" >
             <StackPanel Orientation="Horizontal">
                 <Label Content="Update"/>
             </StackPanel>
         </Button>
 
-        <Button x:Name="DeleteButton" HorizontalAlignment="Left" Margin="250,360,0,0" Click="DeleteButton_Click" VerticalAlignment="Top" Width="70">
+        <Button x:Name="DeleteButton" HorizontalAlignment="Left" Margin="170,360,0,0" Click="DeleteButton_Click" VerticalAlignment="Top" Width="70">
             <StackPanel Orientation="Horizontal">
                 <Label Content="Delete"/>
             </StackPanel>

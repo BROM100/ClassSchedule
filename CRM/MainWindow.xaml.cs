@@ -24,38 +24,11 @@ namespace ClassSchedule
         {
             InitializeComponent();
             ItemList.ItemsSource = ListViewItems;
+            Read();
         }
 
 
-        public class listviewdata
-        {
-            public string Class_name { get; set; }
-            public string Student_name { get; set; }
-            public string Teacher_name { get; set; }
-            public string Room_name { get; set; }
-
-
-        }
-
-        public List<listviewdata> ListViewItems { get; set; } = new List<listviewdata>();
-        public void Read()
-        {
-            using (DataContext context = new DataContext())
-            {
-                foreach (var item in context.Classes.ToList())
-                {
-                    ListViewItems.Add(new listviewdata()
-                    {
-                        Class_name = item.Name,
-                        Student_name = context.Students.Single(Student => Student.ID == item.StudentID).Name,
-                        Teacher_name = context.Teachers.Single(Teacher => Teacher.ID == item.TeacherID).Name,
-                        Room_name = context.Rooms.Single(Room => Room.ID == item.RoomID).Name
-                    });
-                }
-                
-            }
-            ItemList.Items.Refresh();
-        }
+       
 
 
         private void CreateButton_Click(object sender, RoutedEventArgs e)
@@ -65,36 +38,33 @@ namespace ClassSchedule
 
         }
 
-        private void ReadButton_Click(object sender, RoutedEventArgs e)
-        {
-            Read();
-
-        }
+        
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
 
         {
-
+            //Update();
 
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
 
         {
-
+            Delete();
 
         }
 
-
+        //Create
         public void Create()
         {
+            var studentname = StudentTextBox.Text;
+            var teachername = TeacherTextBox.Text;
+            var classname = ClassesTextBox.Text;
+            var roomname = RoomTextBox.Text;
 
             using (DataContext context = new DataContext())
             {
-                var studentname = StudentTextBox.Text;
-                var teachername = TeacherTextBox.Text;
-                var classname = ClassesTextBox.Text;
-                var roomname = RoomTextBox.Text;
+                
 
                 var newstudent = new Student { Name = StudentTextBox.Text };
                 var newteacher = new Teacher { Name = TeacherTextBox.Text };
@@ -122,6 +92,7 @@ namespace ClassSchedule
                     context.Classes.Add(new Class() { Name = classname, StudentID = IDstudent, RoomID = IDroom, TeacherID = IDteacher});
                     context.SaveChanges();
 
+                    Read();
                 }
                 else
                 {
@@ -133,8 +104,83 @@ namespace ClassSchedule
             }
         }
 
-        
-     
-    }
+        //Read 
+        public class listviewdata
+        {
+            public int Class_id { get; set; }
+            public string Class_name { get; set; }
+            public string Student_name { get; set; }
+            public string Teacher_name { get; set; }
+            public string Room_name { get; set; }
+
+
+        }
+
+        public List<listviewdata> ListViewItems { get; set; } = new List<listviewdata>();
+        public void Read()
+        {
+            ListViewItems.Clear();
+            using (DataContext context = new DataContext())
+            {
+                foreach (var item in context.Classes.ToList())
+                {
+                    ListViewItems.Add(new listviewdata()
+                    {   
+                        Class_id = item.ID,
+                        Class_name = item.Name,
+                        Student_name = context.Students.Single(Student => Student.ID == item.StudentID).Name,
+                        Teacher_name = context.Teachers.Single(Teacher => Teacher.ID == item.TeacherID).Name,
+                        Room_name = context.Rooms.Single(Room => Room.ID == item.RoomID).Name
+                    });
+                }
+
+            }
+            ItemList.Items.Refresh();
+        }
+
+
+        //Update
+
+
+        public void Update()
+        {
+
+
+            var selected = ItemList.SelectedItem as listviewdata;
+
+            using (DataContext context = new DataContext())
+            {
+
+                {
+
+                }
+
+
+            }
+        }
+
+
+
+
+        public void Delete()
+        {
+            var selected_row = ItemList.SelectedItem as listviewdata;
+            using (DataContext context = new DataContext())
+            {
+
+                if (selected_row != null)
+                {
+                    Class selectedclass = context.Classes.Single(x => x.ID == selected_row.Class_id);
+
+                    context.Remove(selectedclass);
+                    context.SaveChanges();
+                    Read();
+
+                }
+            }
+        }
+
+
+        }
 }
 
