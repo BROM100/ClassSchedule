@@ -20,15 +20,26 @@ namespace ClassSchedule
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(string usernameprovided)
         {
+            Usernameprovided = usernameprovided;
             InitializeComponent();
             ItemList.ItemsSource = ListViewItems;
             Read();
+            
+        }
+        public MainWindow()
+        {
+           
+            InitializeComponent();
+            ItemList.ItemsSource = ListViewItems;
+            Read();
+
         }
 
-       
-
+        public string Usernameprovided 
+            { get; set; }
+        
        
 
 
@@ -240,12 +251,19 @@ namespace ClassSchedule
 
         }
 
-        //Manage Users 
+        //Manage Users only for admin 
         public void Manage()
-        {   
-            UserWindow userwindow = new UserWindow();
-            userwindow.Show();
-            this.Close();
+        {   if (Usernameprovided == "admin")
+            {
+                UserWindow userwindow = new UserWindow();
+                userwindow.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("You do not have permission to access this resource.");
+            }
+
         }
     }
 }

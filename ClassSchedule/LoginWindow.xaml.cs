@@ -25,6 +25,9 @@ namespace ClassSchedule
             InitializeComponent();
         }
 
+       
+       
+
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             var Usernamevar = UsernameTextBox.Text;
@@ -41,13 +44,12 @@ namespace ClassSchedule
                 {
                     GrantAcces();
                     Close();
-                    //var window = new MainWindow();
-                    //window.ShowDialog();
+                    
                 }
                 else
                 {
                     MessageBox.Show("User not found.");
-                    //Close();
+                    
                 }
             }
         }
@@ -55,7 +57,7 @@ namespace ClassSchedule
 
         public void GrantAcces()
         {
-            MainWindow main = new MainWindow();
+            MainWindow main = new MainWindow(UsernameTextBox.Text.Trim());
             main.Show();
         }
 
