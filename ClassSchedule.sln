@@ -5,16 +5,20 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassSchedule", "ClassSchedule\ClassSchedule.csproj", "{5BE2AEE9-A370-4B7E-9076-CB52659DE76B}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ClassScheduleSetup", "ClassScheduleSetup\ClassScheduleSetup.vdproj", "{0526AAF4-2B75-4E59-8DC8-0488E7512F33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5BE2AEE9-A370-4B7E-9076-CB52659DE76B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5BE2AEE9-A370-4B7E-9076-CB52659DE76B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BE2AEE9-A370-4B7E-9076-CB52659DE76B}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{5BE2AEE9-A370-4B7E-9076-CB52659DE76B}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{5BE2AEE9-A370-4B7E-9076-CB52659DE76B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BE2AEE9-A370-4B7E-9076-CB52659DE76B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0526AAF4-2B75-4E59-8DC8-0488E7512F33}.Debug|Any CPU.ActiveCfg = Release
+		{0526AAF4-2B75-4E59-8DC8-0488E7512F33}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
