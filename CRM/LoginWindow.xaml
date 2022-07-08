@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClassSchedule"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="400" Width="400">
+        Title="LoginWindow" Height="400" Width="400" MinHeight="400" MaxHeight="400" MinWidth="400" MaxWidth="400">
     <Grid>
-        <TextBox x:Name="UsernameTextBox" Margin="90,122,90,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" TextAlignment="Center" Background="Gray" RenderTransformOrigin="0.472,0.495" Height="25" FontWeight="Normal"/>
-        <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Center" Margin="0,169,0,0" VerticalAlignment="Top" Width="120" Background="Gray" Height="25"/>
-        <Button x:Name="SubmitButton" Content="Submit" HorizontalAlignment="Center" Margin="0,216,0,0" VerticalAlignment="Top" Background="#FF6170C3" Width="100" Height="30" Click="SubmitButton_Click"/>
-        <Label Content="Username" HorizontalAlignment="Center" Margin="0,91,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.058,0.304"/>
-        <Label Content="Password" HorizontalAlignment="Center" Margin="120,147,115,0" VerticalAlignment="Top" RenderTransformOrigin="-0.058,0.304"/>
+        <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Left" Margin="135,131,0,0"  VerticalAlignment="Top" TextAlignment="Center" Background="Gray" Width="140"  Height="30" FontWeight="Normal"/>
+        <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" Margin="135,171,0,0" TextBlock.TextAlignment="Center" VerticalAlignment="Top" Width="140" Background="Gray" Height="30"/>
+        <Button x:Name="SubmitButton" Content="Submit" HorizontalAlignment="Left" Margin="140,250,0,0" VerticalAlignment="Top" Background="#FF6170C3" Width="120" Height="40" Click="SubmitButton_Click"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="35,125,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.058,0.304" Background="{x:Null}" FontSize="19" Cursor="None" Width="100"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="35,162,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.058,0.304" FontSize="19" Width="100"/>
+        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="130,32,0,0" TextWrapping="Wrap" Width ="150" Text="Login " VerticalAlignment="Top" FontFamily="Arial" FontWeight="Bold" FontSize="34" TextAlignment="Center"/>
 
 
     </Grid>
