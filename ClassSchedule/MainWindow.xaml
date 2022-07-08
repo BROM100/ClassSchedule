@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClassSchedule"
         mc:Ignorable="d"
-        Title="Class Schedule" Height="450" Width="620" MinHeight="450" MaxHeight="450" MinWidth="620" MaxWidth="620">
+        Title="Class Schedule" Height="450" Width="700" MinHeight="450" MaxHeight="450" MinWidth="700" MaxWidth="700">
     <Grid  >
 
-        <ListView Name="ItemList" Margin="5,20,5,0" Height="195" Width="580" VerticalAlignment="Top" HorizontalAlignment="Left">
+        <ListView Name="ItemList" Margin="5,20,5,0" Height="195" Width="690" VerticalAlignment="Top" HorizontalAlignment="Left">
 
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Id" Width="30"  DisplayMemberBinding="{Binding Class_id}"/>
-                    <GridViewColumn Header="Classes" Width="100"  DisplayMemberBinding="{Binding Class_name}"/>
+                    <GridViewColumn Header="Classes" Width="200"  DisplayMemberBinding="{Binding Class_name}"/>
                     <GridViewColumn Header="Student Name" Width="150" DisplayMemberBinding="{Binding Student_name}"/>
                     <GridViewColumn Header="Teacher Name" Width="150" DisplayMemberBinding="{Binding Teacher_name}"/>
                     <GridViewColumn Header="Room Name" Width="150" DisplayMemberBinding="{Binding Room_name}"/>

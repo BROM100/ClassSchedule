@@ -16,7 +16,7 @@ namespace ClassSchedule
     {
 
         protected override void OnStartup(StartupEventArgs e)
-        {
+        {   
             DatabaseFacade facade = new DatabaseFacade(new DataContext());
             facade.EnsureCreated();
         }
