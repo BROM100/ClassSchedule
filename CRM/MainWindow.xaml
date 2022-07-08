@@ -28,10 +28,10 @@
             <Label Content="Teacher Name" HorizontalAlignment="Left" Margin="3,40,0,0" VerticalAlignment="Top"/>
             <Label Content="Room Name" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top"/>
             <Label Content="Classes Name" HorizontalAlignment="Left" Margin="300,40,0,0" VerticalAlignment="Top"/>
-            <TextBox Name="StudentTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Name,Mode=OneWay}" HorizontalAlignment="Left"  Margin="95,0,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
-            <TextBox Name="TeacherTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Address,Mode=OneWay}" HorizontalAlignment="Left" Margin="95,40,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
-            <TextBox Name="RoomTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Name,Mode=OneWay}" HorizontalAlignment="Left"  Margin="390,0,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
-            <TextBox Name="ClassesTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Name,Mode=OneWay}" HorizontalAlignment="Left"  Margin="390,40,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
+            <TextBox Name="StudentTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Student,Mode=OneWay}" HorizontalAlignment="Left"  Margin="95,0,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
+            <TextBox Name="TeacherTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Teacher,Mode=OneWay}" HorizontalAlignment="Left" Margin="95,40,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
+            <TextBox Name="RoomTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Room,Mode=OneWay}" HorizontalAlignment="Left"  Margin="390,0,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
+            <TextBox Name="ClassesTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Class,Mode=OneWay}" HorizontalAlignment="Left"  Margin="390,40,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
         </Grid>
 
         <Button x:Name="CreateButton" IsEnabled="{Binding ElementName=EnableCheckBox,Path=IsChecked}" HorizontalAlignment="Left" Click="CreateButton_Click" Margin="10,360,0,0" VerticalAlignment="Top" Width="70" >
