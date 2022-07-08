@@ -56,8 +56,26 @@ namespace ClassSchedule
 
         public void Create()
         {
+            using (DataContext context = new DataContext())
+            {
+                var UsernameInput = UsernameTextBox.Text;
+                var PasswordInput = PasswordTextBox.Text;
 
-        }
+
+                if (UsernameInput.Trim() != "" && PasswordInput.Trim() != "")
+
+                {
+                    context.Users.Add(new User () {Username = UsernameInput, Password = PasswordInput});
+                    context.SaveChanges();
+                    Read();
+                }
+                else
+                {
+                    MessageBox.Show("You have to fill all mandatory fields.");
+                }
+            }
+
+            
 
     }
 }
