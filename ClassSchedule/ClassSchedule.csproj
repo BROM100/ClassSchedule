@@ -8,12 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="6.0.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.6" />
+    <Compile Remove="Data\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <None Remove="Data\**" />
+    <Page Remove="Data\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.6" />
   </ItemGroup>
 
 </Project>

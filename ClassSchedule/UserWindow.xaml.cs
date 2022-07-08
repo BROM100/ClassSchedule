@@ -21,6 +21,17 @@ namespace ClassSchedule
     {
         public List<User> DBUsers { get; private set; }
 
+        public UserWindow(string usernameprovided)
+        {
+            InitializeComponent();
+            Read();
+            Usernameprovided = usernameprovided;
+
+        }
+        public string Usernameprovided
+        {   get;
+            private set; 
+        }
         public UserWindow()
         {
             InitializeComponent();
@@ -160,7 +171,7 @@ namespace ClassSchedule
 
         public void Back()
         {
-            MainWindow main = new MainWindow();
+            MainWindow main = new MainWindow(Usernameprovided);
             main.Show();
             this.Close();
         }

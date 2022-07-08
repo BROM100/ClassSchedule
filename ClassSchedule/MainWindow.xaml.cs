@@ -178,7 +178,7 @@ namespace ClassSchedule
                     if (ClassesTextBox.Text.Trim() != "")
                     {
                         var classupdate = context.Classes.Where(x => x.ID.Equals(selected_row.Class_id)).Single();
-                        classupdate.Name = ClassesTextBox.Text;
+                        classupdate.Name = ClassesTextBox.Text.Trim();
                         context.Update(classupdate);
 
                     }
@@ -186,21 +186,21 @@ namespace ClassSchedule
                     {
                         var classupdate = context.Classes.Where(x => x.ID.Equals(selected_row.Class_id)).Single();
                         var studentupdate = context.Students.Where(x => x.ID == classupdate.StudentID).Single();
-                        studentupdate.Name = StudentTextBox.Text;
+                        studentupdate.Name = StudentTextBox.Text.Trim();
                         context.Update(studentupdate);
                     }
                     if (RoomTextBox.Text.Trim() != "")
                     {
                         var classupdate = context.Classes.Where(x => x.ID.Equals(selected_row.Class_id)).Single();
                         var roomupdate = context.Rooms.Where(x => x.ID == classupdate.RoomID).Single();
-                        roomupdate.Name = RoomTextBox.Text;
+                        roomupdate.Name = RoomTextBox.Text.Trim();
                         context.Update(roomupdate);
                     }
                     if (TeacherTextBox.Text.Trim() != "")
                     {
                         var classupdate = context.Classes.Where(x => x.ID.Equals(selected_row.Class_id)).Single();
                         var teacherupdate = context.Teachers.Where(x => x.ID == classupdate.TeacherID).Single();
-                        teacherupdate.Name = TeacherTextBox.Text;
+                        teacherupdate.Name = TeacherTextBox.Text.Trim();
                         context.Update(teacherupdate);
                     }
 
@@ -255,7 +255,7 @@ namespace ClassSchedule
         public void Manage()
         {   if (Usernameprovided == "admin")
             {
-                UserWindow userwindow = new UserWindow();
+                UserWindow userwindow = new UserWindow(Usernameprovided);
                 userwindow.Show();
                 this.Close();
             }

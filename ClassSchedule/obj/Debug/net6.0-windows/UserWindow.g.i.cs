@@ -125,7 +125,7 @@ namespace ClassSchedule {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClassSchedule;V1.0.0.0;component/userwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClassSchedule;component/userwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\UserWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
