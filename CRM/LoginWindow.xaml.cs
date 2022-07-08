@@ -59,9 +59,6 @@ namespace ClassSchedule
             main.Show();
         }
 
-        private void testbutton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }

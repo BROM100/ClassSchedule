@@ -55,6 +55,11 @@ namespace ClassSchedule
 
         }
 
+        private void BacktoLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Back();
+        }
+
         //Create
         public void Create()
         {
@@ -216,8 +221,16 @@ namespace ClassSchedule
                 }
             }
         }
+        //Back to login page 
 
+        public void Back()
+        {
+            LoginWindow login = new LoginWindow();
+            login.Show();
+            this.Close();
 
         }
+        
+    }
 }
 

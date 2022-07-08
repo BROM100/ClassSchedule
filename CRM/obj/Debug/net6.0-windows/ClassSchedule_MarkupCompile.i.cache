@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\barte\OneDrive\Pulpit\CRM\CRM\App.xaml
-2-216653475
+3-525301247
 
-121947485238
+13-1496131528
 2121679372768
-LoginWindow.xaml;MainWindow.xaml;
+LoginWindow.xaml;MainWindow.xaml;UserWindow.xaml;
 
-False
+True
 

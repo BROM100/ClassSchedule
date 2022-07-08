@@ -52,6 +52,11 @@
                 <Label Content="Delete"/>
             </StackPanel>
         </Button>
+        <Button x:Name="BacktologinButton"  HorizontalAlignment="Left" Margin="10,410,0,0" Click="BacktoLogin_Click" VerticalAlignment="Top" Width="70">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Lock"/>
+            </StackPanel>
+        </Button>
 
 
 
