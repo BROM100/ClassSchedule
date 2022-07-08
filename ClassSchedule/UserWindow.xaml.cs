@@ -44,7 +44,7 @@ namespace ClassSchedule
         }
        
 
-       
+       //Read
         public void Read()
         {
             using (DataContext context = new DataContext())
@@ -53,7 +53,7 @@ namespace ClassSchedule
                 UserList.ItemsSource = DBUsers;
             }
         }
-
+        //Create
         public void Create()
         {
             using (DataContext context = new DataContext())
@@ -65,7 +65,7 @@ namespace ClassSchedule
                 if (UsernameInput.Trim() != "" && PasswordInput.Trim() != "")
 
                 {
-                    context.Users.Add(new User () {Username = UsernameInput, Password = PasswordInput});
+                    context.Users.Add(new User() { Username = UsernameInput, Password = PasswordInput });
                     context.SaveChanges();
                     Read();
                 }
@@ -75,7 +75,37 @@ namespace ClassSchedule
                 }
             }
 
-            
 
-    }
-}
+        }
+
+        //Update 
+
+        public void Update()
+        {
+
+            using (DataContext context = new DataContext())
+            {
+
+                User selectedUser = UserList.SelectedItem as User;
+
+                if (selectedUser != null)
+                {
+                    var UsernameInput = UsernameTextBox.Text;
+                    var PasswordInput = PasswordTextBox.Text;
+
+                    if (UsernameInput.Trim() != "" && PasswordInput.Trim() != "")
+                    {
+                        User user = context.Users.Find(selectedUser.ID);
+                        user.Username = UsernameInput;
+                        user.Password = PasswordInput;
+
+                        context.SaveChanges();
+                        Read();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("You have to select a User record to perform an update.");
+                }
+            }
+        }
