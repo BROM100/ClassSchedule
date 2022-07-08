@@ -188,8 +188,8 @@ namespace ClassSchedule
                     if (TeacherTextBox.Text.Trim() != "")
                     {
                         var classupdate = context.Classes.Where(x => x.ID.Equals(selected_row.Class_id)).Single();
-                        var teacherupdate = context.Teachers.Where(x => x.ID == classupdate.RoomID).Single();
-                        teacherupdate.Name = RoomTextBox.Text;
+                        var teacherupdate = context.Teachers.Where(x => x.ID == classupdate.TeacherID).Single();
+                        teacherupdate.Name = TeacherTextBox.Text;
                         context.Update(teacherupdate);
                     }
 
@@ -226,7 +226,7 @@ namespace ClassSchedule
                 }
                 else
                 {
-                    MessageBox.Show("No record selected.");
+                    MessageBox.Show("No  record selected.");
                 }
             }
         }

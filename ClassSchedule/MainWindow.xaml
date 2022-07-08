@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClassSchedule"
         mc:Ignorable="d"
-        Title="ClassSchedule" Height="500" Width="600" MinHeight="500" MaxHeight="500" MinWidth="600" MaxWidth="600">
+        Title="ClassSchedule" Height="450" Width="620" MinHeight="450" MaxHeight="450" MinWidth="620" MaxWidth="620">
     <Grid  >
 
         <ListView Name="ItemList" Margin="5,20,5,0" Height="195" Width="580" VerticalAlignment="Top" HorizontalAlignment="Left">
@@ -53,13 +53,13 @@
             </StackPanel>
         </Button>
         
-        <Button x:Name="BacktologinButton"  HorizontalAlignment="Left" Margin="10,410,0,0" Click="BacktoLogin_Click" VerticalAlignment="Top" Width="70">
+        <Button x:Name="BacktologinButton"  HorizontalAlignment="Left" Margin="370,360,0,0" Click="BacktoLogin_Click" VerticalAlignment="Top" Width="70">
             <StackPanel Orientation="Horizontal">
                 <Label Content="Lock"/>
             </StackPanel>
         </Button>
 
-        <Button x:Name="ManageUsersButton"  HorizontalAlignment="Left" Margin="90,410,0,0" Click="ManageUsers_Click" VerticalAlignment="Top" Width="100">
+        <Button x:Name="ManageUsersButton"  HorizontalAlignment="Left" Margin="450,360,0,0" Click="ManageUsers_Click" VerticalAlignment="Top" Width="100">
             <StackPanel Orientation="Horizontal">
                 <Label Content="Manage Users"/>
             </StackPanel>

@@ -43,6 +43,11 @@ namespace ClassSchedule
             Delete();
         }
 
+        private void BacktoMainPage_Click(object sender, RoutedEventArgs e)
+        {
+            Back();
+        }
+
 
         //Read
         public void Read()
@@ -149,6 +154,15 @@ namespace ClassSchedule
             }
 
 
+        }
+
+        //Back 
+
+        public void Back()
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
         }
     }
 }
