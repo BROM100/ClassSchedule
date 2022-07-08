@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClassSchedule"
         mc:Ignorable="d"
-        Title="UserWindow" Height="440" Width="330">
+        Title="UserWindow" Height="440" Width="310" MinHeight="440" MaxHeight="440" MinWidth="310" MaxWidth="310">
     <Grid>
         <ListView Name="UserList" Margin="5,20,5,0" Height="195" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left">
 
@@ -43,5 +43,14 @@
                 <Label Content="Delete"/>
             </StackPanel>
         </Button>
+
+        <Button x:Name="BacktoMainPageButton"  HorizontalAlignment="Left" Click="UpdateButton_Click" Margin="90,385,0,0" VerticalAlignment="Top" Width="130" >
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Back to Main Window"/>
+            </StackPanel>
+        </Button>
+
+
+
     </Grid>
 </Window>

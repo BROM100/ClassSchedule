@@ -224,6 +224,10 @@ namespace ClassSchedule
                     Read();
 
                 }
+                else
+                {
+                    MessageBox.Show("No record selected.");
+                }
             }
         }
         //Back to login page 

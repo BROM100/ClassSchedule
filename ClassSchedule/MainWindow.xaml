@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClassSchedule"
         mc:Ignorable="d"
-        Title="ClassSchedule" Height="500" Width="1200">
+        Title="ClassSchedule" Height="500" Width="600" MinHeight="500" MaxHeight="500" MinWidth="600" MaxWidth="600">
     <Grid  >
 
         <ListView Name="ItemList" Margin="5,20,5,0" Height="195" Width="580" VerticalAlignment="Top" HorizontalAlignment="Left">
@@ -28,10 +28,10 @@
             <Label Content="Teacher Name" HorizontalAlignment="Left" Margin="3,40,0,0" VerticalAlignment="Top"/>
             <Label Content="Room Name" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top"/>
             <Label Content="Classes Name" HorizontalAlignment="Left" Margin="300,40,0,0" VerticalAlignment="Top"/>
-            <TextBox Name="StudentTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Student,Mode=OneWay}" HorizontalAlignment="Left"  Margin="95,0,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
-            <TextBox Name="TeacherTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Teacher,Mode=OneWay}" HorizontalAlignment="Left" Margin="95,40,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
-            <TextBox Name="RoomTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Room,Mode=OneWay}" HorizontalAlignment="Left"  Margin="390,0,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
-            <TextBox Name="ClassesTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Class,Mode=OneWay}" HorizontalAlignment="Left"  Margin="390,40,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
+            <TextBox Name="StudentTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Student_name,Mode=OneWay}" HorizontalAlignment="Left"  Margin="95,0,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
+            <TextBox Name="TeacherTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Teacher_name,Mode=OneWay}" HorizontalAlignment="Left" Margin="95,40,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
+            <TextBox Name="RoomTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Room_name,Mode=OneWay}" HorizontalAlignment="Left"  Margin="390,0,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
+            <TextBox Name="ClassesTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Class_name,Mode=OneWay}" HorizontalAlignment="Left"  Margin="390,40,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
         </Grid>
 
         <Button x:Name="CreateButton" IsEnabled="{Binding ElementName=EnableCheckBox,Path=IsChecked}" HorizontalAlignment="Left" Click="CreateButton_Click" Margin="10,360,0,0" VerticalAlignment="Top" Width="70" >

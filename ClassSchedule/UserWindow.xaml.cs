@@ -25,7 +25,7 @@ namespace ClassSchedule
         {
             InitializeComponent();
             Read();
-            
+
         }
 
         private void CreateButton_Click(object sender, RoutedEventArgs e)
@@ -35,16 +35,16 @@ namespace ClassSchedule
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-           // Update();
+            Update();
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-           // Delete();
+            Delete();
         }
-       
 
-       //Read
+
+        //Read
         public void Read()
         {
             using (DataContext context = new DataContext())
@@ -88,24 +88,67 @@ namespace ClassSchedule
 
                 User selectedUser = UserList.SelectedItem as User;
 
-                if (selectedUser != null)
+                if (selectedUser.ID != 1)
                 {
-                    var UsernameInput = UsernameTextBox.Text;
-                    var PasswordInput = PasswordTextBox.Text;
 
-                    if (UsernameInput.Trim() != "" && PasswordInput.Trim() != "")
+                    if (selectedUser != null)
                     {
-                        User user = context.Users.Find(selectedUser.ID);
-                        user.Username = UsernameInput;
-                        user.Password = PasswordInput;
+                        var UsernameInput = UsernameTextBox.Text;
+                        var PasswordInput = PasswordTextBox.Text;
 
-                        context.SaveChanges();
-                        Read();
+                        if (UsernameInput.Trim() != "" && PasswordInput.Trim() != "")
+                        {
+                            User user = context.Users.Find(selectedUser.ID);
+                            user.Username = UsernameInput;
+                            user.Password = PasswordInput;
+
+                            context.SaveChanges();
+                            Read();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("You have to select a User record to perform an update.");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("You have to select a User record to perform an update.");
+                    MessageBox.Show("You can not change admin user");
                 }
             }
         }
+
+
+        //Delete 
+
+        public void Delete()
+        {
+            using (DataContext context = new DataContext())
+            {
+
+                User selectedUser = UserList.SelectedItem as User;
+                if (selectedUser.ID != 1)
+                {
+
+                    if (selectedUser != null)
+                    {
+                        User user = context.Users.Single(x => x.ID == selectedUser.ID);
+                        context.Remove(user);
+                        context.SaveChanges();
+                        Read();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No User record selected.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("You can not delete admin user");
+                }
+            }
+
+
+        }
+    }
+}
